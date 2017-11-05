@@ -7,7 +7,7 @@ class SearchController < ApplicationController
   	
   	ekispa_access_key = "LE_jemg3F9C3WEwk"
   	
-  	ekispa_url = 'http://api.ekispert.jp/v1/json/'
+  	ekispa_url = 'https://api.ekispert.jp/v1/json/'
   	
   	station_url = ekispa_url + "staton?key=" + ekispa_access_key + "&oldName=" + @query
   	
