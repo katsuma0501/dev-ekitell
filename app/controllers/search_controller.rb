@@ -37,6 +37,7 @@ class SearchController < ApplicationController
       # 成功した場合
       when Net::HTTPSuccess
         # responseのbody要素をJSON形式で解釈し、hashに変換
+        @message = "success"
         @resBody = response.body
         @result = JSON.parse(response.body)
         # 表示用の変数に結果を格納
@@ -51,13 +52,13 @@ class SearchController < ApplicationController
       end
     # エラー時処理
     rescue IOError => e
-      @message = "e.message"
+      @message = "e.message 1"
     rescue TimeoutError => e
-      @message = "e.message"
+      @message = "e.message 2"
     rescue JSON::ParserError => e
-      @message = "e.message"
+      @message = "e.message 3"
     rescue => e
-      @message = "e.message"
+      @message = "e.message 4"
     end
   	
   end
