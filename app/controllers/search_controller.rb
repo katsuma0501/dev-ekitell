@@ -6,24 +6,24 @@ class SearchController < ApplicationController
 
   	@query = params[:query]
   	
-  	station_name = params[:query]
+  	# station_name = params[:query]
   	
   	ekispa_access_key = "LE_jemg3F9C3WEwk"
   	
   	ekispa_url = 'http://api.ekispert.jp/v1/json/'
   	
-  	station_url = ekispa_url + "staton?key=" + ekispa_access_key + "&oldName=" + @query
+  	# station_url = ekispa_url + "staton?key=" + ekispa_access_key + "&name=" + @query
   	
   	# info_url = ekispa_url + "station/info?key=" + ekispa_access_key + "&code=22828&type=rail:nearrail:exit:welfare"
   	
   	
-  	station_param = URI.encode_www_form({'key': ekispa_access_key, 'name': station_name})
+  	station_param = URI.encode_www_form({'key': ekispa_access_key, 'name': @query})
   	
-  	# uri = URI.parse( ekispa_url + "staton?#{station_param}")
+  	uri = URI.parse( ekispa_url + "staton?#{station_param}")
   	
-  	en_station_url = URI.escape(station_url)
+  	# en_station_url = URI.escape(station_url)
     
-    uri = URI.parse( en_station_url )
+    # uri = URI.parse( en_station_url )
     # リクエストパラメタを、インスタンス変数に格納
     @query = uri.query
   	
