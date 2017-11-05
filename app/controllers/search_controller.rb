@@ -35,7 +35,7 @@ class SearchController < ApplicationController
       # responseの値に応じて処理を分ける
       case response
       # 成功した場合
-      when Net::HTTPRedirection
+      when Net::HTTPSuccess
         # responseのbody要素をJSON形式で解釈し、hashに変換
         @result = JSON.parse(response.body)
         # 表示用の変数に結果を格納
