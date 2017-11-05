@@ -9,14 +9,16 @@ class SearchController < ApplicationController
   	
   	ekispa_url = 'http://api.ekispert.jp/v1/json/'
   	
-  	# station_url = ekispa_url + "staton?key=" + ekispa_access_key + "&oldName=上鯖江"
+  	station_url = ekispa_url + "staton?key=" + ekispa_access_key + "&oldName=" + @query
   	
   	# info_url = ekispa_url + "station/info?key=" + ekispa_access_key + "&code=22828&type=rail:nearrail:exit:welfare"
   	
   	
   	station_param = URI.encode_www_form({'key': ekispa_access_key, 'name': station_name})
   	
-  	uri = URI.parse( ekispa_url + "staton?#{station_param}")
+  	# uri = URI.parse( ekispa_url + "staton?#{station_param}")
+    
+    uri = URI.parse( station_url )
     # リクエストパラメタを、インスタンス変数に格納
     @query = uri.query
   	
