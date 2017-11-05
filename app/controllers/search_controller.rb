@@ -37,6 +37,7 @@ class SearchController < ApplicationController
       # 成功した場合
       when Net::HTTPSuccess
         # responseのbody要素をJSON形式で解釈し、hashに変換
+        @resBody = response.body
         @result = JSON.parse(response.body)
         # 表示用の変数に結果を格納
         @stationName = @result["Point"][0]["Station"]["Name"]
