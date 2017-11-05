@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
+    require 'net/http'
   	@query = params[:query]
   	
   	station_name = params[:query]
