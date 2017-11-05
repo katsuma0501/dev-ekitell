@@ -17,8 +17,10 @@ class SearchController < ApplicationController
   	station_param = URI.encode_www_form({'key': ekispa_access_key, 'name': station_name})
   	
   	# uri = URI.parse( ekispa_url + "staton?#{station_param}")
+  	
+  	en_station_url = URI.escape(station_url)
     
-    uri = URI.parse( station_url )
+    uri = URI.parse( en_station_url )
     # リクエストパラメタを、インスタンス変数に格納
     @query = uri.query
   	
