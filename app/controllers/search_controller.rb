@@ -39,8 +39,8 @@ class SearchController < ApplicationController
         # responseのbody要素をJSON形式で解釈し、hashに変換
         @result = JSON.parse(response.body)
         # 表示用の変数に結果を格納
-        # @stationName = @result["Point"][0]["Station"]["Name"]
-        p @result
+        @stationName = @result["Point"][0]["Station"]["Name"]
+        @stationCode = @result["Point"][0]["Station"]["code"]
       # 別のURLに飛ばされた場合
       when Net::HTTPRedirection
         @message = "Redirection: code=#{response.code} message=#{response.message}"
