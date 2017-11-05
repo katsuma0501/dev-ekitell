@@ -1,13 +1,16 @@
 class SearchController < ApplicationController
   def index
-    require 'net/https'
+    require 'net/http'
+    require 'uri'
+    require 'json'
+
   	@query = params[:query]
   	
   	station_name = params[:query]
   	
   	ekispa_access_key = "LE_jemg3F9C3WEwk"
   	
-  	ekispa_url = 'https://api.ekispert.jp/v1/json/'
+  	ekispa_url = 'http://api.ekispert.jp/v1/json/'
   	
   	station_url = ekispa_url + "staton?key=" + ekispa_access_key + "&oldName=" + @query
   	
