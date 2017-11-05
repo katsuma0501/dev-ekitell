@@ -14,7 +14,7 @@ class SearchController < ApplicationController
   	# info_url = ekispa_url + "station/info?key=" + ekispa_access_key + "&code=22828&type=rail:nearrail:exit:welfare"
   	
   	
-  	station_param = URI.encode_www_form({key: ekispa_access_key, name: station_name})
+  	station_param = URI.encode_www_form({'key': ekispa_access_key, 'name': station_name})
   	
   	uri = URI.parse( ekispa_url + "staton?#{station_param}")
     # リクエストパラメタを、インスタンス変数に格納
