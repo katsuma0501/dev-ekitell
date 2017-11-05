@@ -1,0 +1,104 @@
+body { padding-top: 80px; }
+a{
+  color: #333;
+}
+.services {
+    position: relative;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.services .icon {
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.services .icon i {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 40px;
+    line-height: 40px;
+    color: #000;
+}
+.services h3 {
+    font-size: 13px;
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.icon-diamond:before {
+    content: "\e910";
+}
+.icon-lab2:before {
+    content: "\e925";
+}
+.icon-settings:before {
+    content: "\e90a";
+}
+
+#gtco-features, #gtco-features-2, #gtco-products, #gtco-services, #gtco-subscribe, #gtco-footer, .gtco-section {
+    padding: 7em 0;
+    clear: both;
+    position: relative;
+}
+
+.theme-color{
+  color: #4cae4c !important;
+}
+.bg-theme-color{
+  background: #4cae4c !important;
+  border-color: #4cae4c !important;
+}
+  @media ( min-width: 768px ) {
+    #banner {
+      min-height: 150px;
+      border-bottom: none;
+    }
+    .bs-docs-section {
+      margin-top: 8em;
+    }
+    .bs-component {
+      position: relative;
+    }
+    .bs-component .modal {
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      z-index: 1;
+      display: block;
+    }
+    .bs-component .modal-dialog {
+      width: 90%;
+    }
+    .bs-component .popover {
+      position: relative;
+      display: inline-block;
+      width: 220px;
+      margin: 20px;
+    }
+    .nav-tabs {
+      margin-bottom: 15px;
+    }
+    .progress {
+      margin-bottom: 10px;
+    }
+  }
+@media ( max-width: 767px ) {
+  .page-header{
+    border: none;
+  }
+  .sp_mb_60{
+    margin-bottom: 60px;
+  }
+}
