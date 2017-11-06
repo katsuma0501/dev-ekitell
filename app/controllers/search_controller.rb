@@ -19,7 +19,8 @@ class SearchController < ApplicationController
   	
   	station_param = URI.encode_www_form({'key': ekispa_access_key, 'name': @query})
   	
-  	uri = URI.parse( ekispa_url + "staton?#{station_param}")
+  	# uri = URI.parse( ekispa_url + "staton?#{station_param}")
+  	uri = URI.parse( "http://weather.livedoor.com/forecast/webservice/json/v1?city=200010"  )
   	
   	# en_station_url = URI.escape(station_url)
     
@@ -48,8 +49,8 @@ class SearchController < ApplicationController
         @resBody = response.body
         @result = JSON.parse(response.body)
         # 表示用の変数に結果を格納
-        @stationName = @result["Point"][0]["Station"]["Name"]
-        @stationCode = @result["Point"][0]["Station"]["code"]
+        # @stationName = @result["Point"][0]["Station"]["Name"]
+        # @stationCode = @result["Point"][0]["Station"]["code"]
       # 別のURLに飛ばされた場合
       when Net::HTTPRedirection
         @message = "Redirection: code=#{response.code} message=#{response.message}"
