@@ -8,7 +8,11 @@
             </div>
             
             <%= @facility %>
-    
+            
+            <% @facility.each do |fa| %>
+            <%= fa %>
+            <% end %>
+            
             <div class="bs-component">
               <table class="table table-striped table-hover ">
                 <thead>
