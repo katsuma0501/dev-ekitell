@@ -39,8 +39,13 @@ class SearchController < ApplicationController
         @resBody = response.body
         @result = JSON.parse(response.body)
         # 表示用の変数に結果を格納
-        @stationName = @result["ResultSet"]["Point"][0]["Station"]["Name"]
-        @stationCode = @result["ResultSet"]["Point"][0]["Station"]["code"]
+        if @result["ResultSet"]["Point"].size > 1
+          @stationName = @result["ResultSet"]["Point"][0]["Station"]["Name"]
+          @stationCode = @result["ResultSet"]["Point"][0]["Station"]["code"]
+        else
+          @stationName = @result["ResultSet"]["Point"]["Station"]["Name"]
+          @stationCode = @result["ResultSet"]["Point"]["Station"]["code"]
+        end
       # 別のURLに飛ばされた場合
       when Net::HTTPRedirection
         @message = "Redirection: code=#{response.code} message=#{response.message}"
