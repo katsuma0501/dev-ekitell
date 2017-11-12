@@ -39,7 +39,7 @@ class SearchController < ApplicationController
         @resBody = response.body
         @result = JSON.parse(response.body)
         # 表示用の変数に結果を格納
-        if @result["ResultSet"]["Point"].size > 1
+        if @result["ResultSet"]["Point"].kind_of?(Array)
           @stationName = @result["ResultSet"]["Point"][0]["Station"]["Name"]
           @stationCode = @result["ResultSet"]["Point"][0]["Station"]["code"]
         else
