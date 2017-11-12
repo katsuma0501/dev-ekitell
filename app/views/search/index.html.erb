@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                   <% comment = fa["Comment"].split(/\R/) %>
-                  <% @comment.each do |c| %>
+                  <% comment.each do |c| %>
                   <% s = c.split("：") as s %>
                   <tr>
                     <td><%= s["0"] %></td>
