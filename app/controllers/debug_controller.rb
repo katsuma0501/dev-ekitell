@@ -38,6 +38,7 @@ class DebugController < ApplicationController
         @message = "success"
         @resBody = response.body
         @result = JSON.parse(response.body)
+        @arr_ret = @result["ResultSet"]["Point"].kind_of?(Array)
       # 別のURLに飛ばされた場合
       when Net::HTTPRedirection
         @message = "Redirection: code=#{response.code} message=#{response.message}"
