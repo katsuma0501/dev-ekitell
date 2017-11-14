@@ -1,69 +1,128 @@
-<div class="container">
-  
-  <div class="page-header" id="banner">
+<div class="bs-docs-section　clearfix">
     <div class="row">
-      <div class="col-lg-8 col-md-7 col-sm-6 col-md-offset-2 text-center">
-        <h1>あの駅はバリアフリー？</h1>
-        <p class="lead">駅名を入力するとバリアフリー判定します</p>
+      <div class="col-lg-12 col-md-12">
+        <div class="page-header">
+          <h2 id="nav-tabs">駅名で検索</h2>
+        </div>
+          <div class="bs-component">
+            <form class="form-horizontal" action="station.html">
+              <fieldset>
+                <div class="form-group">
+                  <div class="col-lg-6 col-md-6">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="駅名を入力">
+                  </div>
+                  <div class="col-lg-4 col-md-4 sp-mt-20">
+                    <select class="form-control" id="select">
+                      <option>路線を指定</option>
+                      <option>銀座線</option>
+                      <option>丸の内線</option>
+                      <option>半蔵門線</option>
+                      <option>副都心線</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-2 col-md-2 sp-mt-20">
+                    <button type="submit" class="btn btn-primary btn-block">検索</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+        </div>
       </div>
     </div>
   </div>
-  
-  
-    <div class="row">
-      <div class="col-md-7 col-sm-6 col-md-offset-3">
-        <div>
 
-          <form action="/search" method="get">
-            <div class="form-group col-lg-9">
-              <input type="text" name="query" class="form-control" placeholder="銀座駅">
-            </div>
-            <div class="center-block text-center sp_mb_60">
-              <button type="submit" class="btn btn-success">検索</button>                          
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-    <div class="bs-docs-section">      
+  <div class="bs-docs-section　clearfix">
       <div class="row">
-        <div class="col-md-4 text-center animate-box fadeInUp animated-fast">
-          <div class="services">
-            <span class="icon">
-              <i class="fa fa-diamond"></i>
-            </span>
-            <div class="desc">
-              <h3><a href="#">Brand Identity</a></h3>
-              <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+        <div class="col-lg-12 col-md-12">
+          <div class="page-header">
+            <h2 id="nav-tabs">路線から検索</h2>
+          </div>
+          <div class="bs-component col-lg-6 col-md-6">
+            <table class="table table-striped table-hover nav nav-tabs">
+              <tbody>
+                <tr class="info">
+                  <td><img src="img/symbol/icon_ginza.png" class="symbol-metro"></td>
+                  <td><a href="#home" data-toggle="tab">銀座線</a></td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_marunouchi.png" class="symbol-metro"></td>
+                  <td><a href="#dropdown1" data-toggle="tab">丸の内線</a></td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_hibiya.png" class="symbol-metro"></td>
+                  <td>日比谷線</td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_tozai.png" class="symbol-metro"></td>
+                  <td>東西線</td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_chiyoda.png" class="symbol-metro"></td>
+                  <td>千代田線</td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_yurakucho.png" class="symbol-metro"></td>
+                  <td>有楽町線</td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_hanzomon.png" class="symbol-metro"></td>
+                  <td>半蔵門線</td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_namboku.png" class="symbol-metro"></td>
+                  <td>南北線</td>
+                </tr>
+                <tr>
+                  <td><img src="img/symbol/icon_fukutoshin.png" class="symbol-metro"></td>
+                  <td>副都心線</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="myTabContent" class="tab-content col-lg-6 col-md-6">
+            <div id="home" class="bs-component tab-pane fade active in">
+              <table class="table table-striped table-hover ">
+                <tbody>
+                  <tr>
+                    <td>渋谷</td>
+                  </tr>
+                  <tr>
+                    <td>表参道</td>
+                  </tr>
+                  <tr>
+                    <td>外苑前</td>
+                  </tr>
+                  <tr>
+                    <td>青山一丁目</td>
+                  </tr>
+                  <tr>
+                    <td>赤坂見附</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="dropdown1" class="tab-pane fade">
+              <table class="table table-striped table-hover ">
+                <tbody>
+                  <tr>
+                    <td>荻窪</td>
+                  </tr>
+                  <tr>
+                    <td>南阿佐ヶ谷</td>
+                  </tr>
+                  <tr>
+                    <td>新高円寺</td>
+                  </tr>
+                  <tr>
+                    <td>東高円寺</td>
+                  </tr>
+                  <tr>
+                    <td>新中野</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-        <div class="col-md-4 text-center animate-box fadeInUp animated-fast">
-          <div class="services">
-            <span class="icon">
-              <i class="fa fa-flask"></i>
-            </span>
-            <div class="desc">
-              <h3><a href="#">Web Design &amp; UI</a></h3>
-              <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 text-center animate-box fadeInUp animated-fast">
-          <div class="services">
-            <span class="icon">
-              <i class="fa fa-cogs"></i>
-            </span>
-            <div class="desc">
-              <h3><a href="#">Web Development</a></h3>
-              <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-            </div>
-          </div>
         </div>
       </div>
-      
-      
-            
-    </div>  
-</div>
