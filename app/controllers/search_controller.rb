@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-  def index
+  def indextwo
     require 'net/http'
     require 'uri'
     require 'json'
@@ -112,6 +112,23 @@ class SearchController < ApplicationController
       @message = "e.message 4"
     end
   	
+  end
+  
+  def index
+    require 'net/http'
+    require 'uri'
+    require 'json'
+    $url = "https://api.tokyometroapp.jp/api/v2/datapoints/odpt.StationFacility:TokyoMetro.Shinjuku?acl:consumerKey=51db5b468268e015da781ddd2dca1c9111474e5cf45c5191d2c60271ac537659"
+    
+    # 例.新宿三丁目 副都心線 〜 明治神宮　副都心 - 千代田線　〜　赤坂
+    #   新宿三丁目  出口4エレベータ　-> 改札外エレベータ -> 改札内エレベータ -> 副都心線ホーム
+    #   めいじじんぐう　副都心ホーム　改札内エレベータ -> 千代田線内ホーム行きエレベータ
+    # 　赤坂　改札内エレベータ　-> 出口３aエレベータ(地上)
+    
+    # 新宿三丁目
+    "https://api.tokyometroapp.jp/api/v2/datapoints/odpt.StationFacility:TokyoMetro.ShinjukuSanchome?acl:consumerKey=51db5b468268e015da781ddd2dca1c9111474e5cf45c5191d2c60271ac537659"
+    # 明治神宮
+    "https://api.tokyometroapp.jp/api/v2/datapoints/odpt.StationFacility:TokyoMetro.MeijiJingumae?acl:consumerKey=51db5b468268e015da781ddd2dca1c9111474e5cf45c5191d2c60271ac537659"
   end
 
   def method_name
